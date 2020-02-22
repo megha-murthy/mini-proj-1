@@ -1,0 +1,25 @@
+{
+  "name": "mini-proj-1",
+  "version": "1.0.0",
+  "description": "mini-pros",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megha-murthy/mini-proj-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megha-murthy/mini-proj-1/issues"
+  },
+  "homepage": "https://github.com/megha-murthy/mini-proj-1#readme"
+}

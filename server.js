@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require('path');
-const Reservation = require('reservation');
-const Restaurant = require('restaurant');
+const Reservation = require('./reservation');
+const Restaurant = require('./resturant');
 const app = express();
 const PORT = 3000;
+
 
 
 const restaurant = new Restaurant();
@@ -13,7 +14,10 @@ app.use(express.json());
 
 app.post('/make', (req, res) => {
     const newReservation = new Reservation(req.body);
+    // console.log(newReservation);
     restaurant.addReservation(newReservation);
+    // console.log(restaurant.tables);
+    console.log(restaurant.waitList);
 });
 
 app.get('/api/table', (req, res) => {

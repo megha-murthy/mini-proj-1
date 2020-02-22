@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <title>Hot Restaurant</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
   <div class="jumbotron jumbotron-fluid">
@@ -33,7 +34,7 @@
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control" id="email">
+        <input type="text" class="form-control" id="input-email">
       </div>
       <div class="form-group">
         <label for="uniqueID">Unique ID</label>
@@ -51,6 +52,26 @@
 
 </div>
 </div>
-  <script type = "text/javascript" src = "server.js"></script>
+  <script>
+    const inputName = $("#input-name");
+    const inputPhone = $("#input-phone");
+    const inputEmail = $("#input-email");
+    const inputiId = $("#input-ID");
+    const submit = $(".submit");
+    
+    submit.on("click", function(e) {
+      e.preventDefault();
+      $.post("/make", 
+      {
+        name: inputName.val(),
+        phone: inputPhone.val(),
+        email: inputEmail.val(),
+        id: inputiId.val()
+      },
+      function(data, status) {
+        console.log(data);
+      })
+    })
+  </script>
 </body>
 </html>

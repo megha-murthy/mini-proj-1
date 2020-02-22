@@ -16,7 +16,7 @@ app.post('/make', (req, res) => {
     const newReservation = new Reservation(req.body);
     // console.log(newReservation);
     restaurant.addReservation(newReservation);
-    // console.log(restaurant.tables);
+    console.log(restaurant.tables);
     console.log(restaurant.waitList);
 });
 

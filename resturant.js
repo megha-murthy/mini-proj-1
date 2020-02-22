@@ -10,18 +10,21 @@ class resturant{
         let dupe = false;
         for(let i=0;i<this.tables.length;i++){
             if(this.tables[i].id == data.id){
+                console.log(this.tables[i].id + ' ' + data.id)
                 dupe = true;
             }
            
         }
-        if(this.tables.length < 5 && dupe == false){
-            this.tables.push(data);
-        } else {
-            this.waitList.push(data);
+        if (dupe == false) {
+            if(this.tables.length < 5){
+                this.tables.push(data);
+            } else {
+                this.waitList.push(data);
+            }
         }
+
+        
     }
-
-
 }
 
 module.exports= resturant;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Hot Restaurant</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container" style = "text-align: center;">
+        <h1 class="display-4">Hot Restaurant</h1>
+        <p class = "lead">We only have 5 tables! Book your seat before they all are gone!</p>
+        <a href="view.html" class="btn btn-primary" role="button">View Tables</a>
+    </div>
+  </div>
+<div class = "row" style = "margin: 0 auto; width:70%">
+<div class = "col-lg-12">
+<div class = "panel panel-default">
+    <div class = "panel-heading">
+        <h4>Table Reservation</h4>
+    </div>
+    <div class = "panel-body">
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="input-name" placeholder="name">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text" class="form-control" id="input-phone" placeholder="phoneNumber">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="email">
+      </div>
+      <div class="form-group">
+        <label for="uniqueID">Unique ID</label>
+        <input type="text" class="form-control" id="input-ID" placeholder="uniqueID">
+      </div>
+      <button type = "submit" class = "btn btn-primary submit">Submit</button>
+  </form>
+  </div>    
+</div>  
+<br>
+<footer>
+    <p><a href="">API Table Link</a></p>
+    <p><a href="">API Wait List</a></p>
+</footer> 
+
+</div>
+</div>
+  <script type = "text/javascript" src = "server.js"></script>
+</body>
+</html>
